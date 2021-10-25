@@ -1,11 +1,7 @@
-import React from "react";
+import React from 'react'
 
-import {Container} from "./style"
+import { Container } from './style'
 
-const Login = () => (
-    <Container>
-        LOGIN
-    </Container>
-);
+const Login = () => <Container>LOGIN</Container>
 
-export default Login;
+export default Login

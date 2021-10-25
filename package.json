@@ -6,7 +6,12 @@
   "author": "klessitonrds <klessitom@gmail.com>",
   "license": "MIT",
   "private": true,
-  "workspaces":[
-    "packages/*"
-  ]
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/dotenv"
+    ]
+  }
 }
