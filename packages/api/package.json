@@ -4,7 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon --watch 'src/' --exec 'clear && ts-node src/index.ts' -e ts"
+    "start": "node dist/index.js",
+    "dev": "nodemon --watch 'src/' --exec 'clear && ts-node src/index.ts -T -D' -e ts",
+    "build": "tsc ./src/index.ts --outDir ./dist/ --esModuleInterop"
   },
   "dependencies": {
     "dotenv": "^10.0.0",

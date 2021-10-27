@@ -1,6 +1,6 @@
 import express from 'express'
 
-export default () => {
+export default (): express.Application => {
   const app = express()
   const port = 3003
 
