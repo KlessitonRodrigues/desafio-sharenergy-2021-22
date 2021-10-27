@@ -11,8 +11,8 @@ async function startUp() {
   await configMongoOse()
   const app = await configExpress()
 
-  app.use(cors)
   app.use('/api', autheticate)
+  app.use(cors)
   app.use(routes)
 }
 
