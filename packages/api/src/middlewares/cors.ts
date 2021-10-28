@@ -6,13 +6,9 @@ export default (req: Request, res: Response, next: NextFunction) => {
     'Access-Control-Allow-Methods',
     'GET, POST, PUT, DELETE, OPTIONS, PATCH'
   )
-  res.header('Access-Control-Allow-Headers', [
-    'Origin',
-    ' X-Requested-With',
-    ' Content-Type',
-    ' Accept',
-    ' Accept-Language',
-    'Content-Language'
-  ])
+  res.header(
+    'Access-Control-Allow-Headers',
+    'Origin, X-Requested-With, Content-Type, Accept, Authorization'
+  )
   next()
 }

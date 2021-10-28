@@ -6,6 +6,6 @@ export default (req: Request, res: Response, next: NextFunction): void => {
   if (token === 'efseFgGEesfFEff32fw3fSEFF3') {
     next()
   } else {
-    res.status(403).send({ success: 0, msg: 'not authenticated!' })
+    res.status(200).send({ success: 0, msg: 'not authenticated!' })
   }
 }
