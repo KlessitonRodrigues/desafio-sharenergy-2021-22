@@ -1,6 +1,7 @@
 import React from 'react'
 
-import { login } from '../../data/api/auth'
+// import { login } from '../../data/api/auth'
+import { getClients } from '../../data/api/clients'
 import { Container } from './style'
 
 const loginForm = () => (
@@ -9,11 +10,7 @@ const loginForm = () => (
     <input type="text" />
     <button
       type="button"
-      onClick={() => {
-        login({ name: 'admin', password: '12345' })
-          .then((token) => alert(token))
-          .catch((err) => alert(err))
-      }}
+      onClick={() => getClients().then((res) => console.log(res))}
     >
       submit
     </button>
