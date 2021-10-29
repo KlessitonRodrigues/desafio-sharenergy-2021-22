@@ -1,20 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-// import { login } from '../../data/api/auth'
-import { getClients } from '../../data/api/clients'
+import { login } from '../../data/api/auth'
+import TextInput from '../../templates/textInput/index'
+import Button from '../../templates/button/index'
 import { Container } from './style'
 
-const loginForm = () => (
-  <Container>
-    <input type="text" />
-    <input type="text" />
-    <button
-      type="button"
-      onClick={() => getClients().then((res) => console.log(res))}
-    >
-      submit
-    </button>
-  </Container>
-)
+const LoginForm = () => {
+  const [formData, setFormData] = useState({ user: '', password: '' })
 
-export default loginForm
+  return (
+    <Container>
+      <TextInput
+        value={formData.user}
+        onChange={(user) => setFormData({ ...formData, user })}
+        label="Usuário"
+      />
+      <TextInput
+        type="password"
+        value={formData.password}
+        onChange={(password) => setFormData({ ...formData, password })}
+        label="Senha"
+      />
+      <Button
+        text="Login"
+        onClick={() =>
+          login(formData).then((res) => {
+            if (res.success) window.location.hash = 'home'
+          })
+        }
+      />
+    </Container>
+  )
+}
+
+export default LoginForm

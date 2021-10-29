@@ -1,13 +1,13 @@
 import axios from 'axios'
 import { defaults, ApiResponse } from '../axios'
 
-type Credentials = {
-  user: string
-  password: string
-}
-
 type Token = {
   token: string
+}
+
+export type Credentials = {
+  user: string
+  password: string
 }
 
 export async function login(user: Credentials) {

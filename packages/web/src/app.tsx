@@ -1,12 +1,14 @@
 import React from 'react'
-import GlobalStyle from './globalStyle'
+import { GlobalStyle, Theme } from './appStyle'
 import Routes from './routes'
-import './data/axios'
+import './data/main'
 
 const App = () => (
   <div>
     <GlobalStyle />
-    <Routes />
+    <Theme>
+      <Routes />
+    </Theme>
   </div>
 )
 

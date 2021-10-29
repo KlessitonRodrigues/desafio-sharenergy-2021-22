@@ -13,6 +13,7 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint'],
   rules: {
+    'react/prop-types': 'off',
     'no-use-before-define': 'off',
     'space-before-function-paren': 'off'
   }
