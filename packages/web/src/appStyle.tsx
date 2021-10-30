@@ -17,9 +17,9 @@ body {
 const theme = {
   colors: {
     primary: '#FDD835', // yellow 600
-    primaryVariant: '#F9A825', // yellow 800
+    primaryVariant: '#F57F17', // yellow 900
     onPrimary: '#333',
-    secondary: '#424242', // gray 800
+    secondary: '#212121', // gray 900
     onSecondary: '#FFF',
     background: '#EEEEEE', // gray 200
     onBack: '#333',

@@ -20,11 +20,11 @@ export const Button = styled.button`
   border-radius: ${(props) => props.theme.radius};
   background-color: transparent;
   border: none;
-  height: 3.5rem;
-  width: 3.5rem;
+  height: 3rem;
+  width: 3rem;
   margin: 0.5rem;
   transition: background-color 0.5s;
-  &:hover {
+  &.--active {
     background-color: ${(props) => props.theme.colors.surface};
     color: ${(props) => props.theme.colors.onSurface};
   }

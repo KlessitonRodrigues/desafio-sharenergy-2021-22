@@ -1,9 +1,12 @@
 import React from 'react'
 
-import { Container } from './style'
+import { Container, Title, Content } from './style'
 
-const Panel = (props: { children: React.ReactElement }) => (
-  <Container>{props.children}</Container>
+const Panel = (props: { children }) => (
+  <Container>
+    <Title>TEST</Title>
+    <Content>{props.children}</Content>
+  </Container>
 )
 
 export default Panel
