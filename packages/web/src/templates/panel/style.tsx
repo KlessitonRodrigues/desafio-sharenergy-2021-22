@@ -2,10 +2,6 @@ import styled, { keyframes } from 'styled-components'
 
 const panelSlide = keyframes`
   0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  50% {
     opacity: 0;
     transform: translateY(100%);
   }
@@ -26,7 +22,7 @@ export const Container = styled.div`
   left: 2%;
   top: 5.5rem;
   overflow-y: auto;
-  animation: ${panelSlide} .8s ease-out;
+  animation: ${panelSlide} 0.5s ease-out;
 
   @media (min-width: ${(props) => props.theme.screens.md}) {
     top: 3%;

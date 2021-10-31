@@ -1,36 +1,28 @@
 import React, { useState } from 'react'
 
-import { Container, Button } from './style'
+import BarButton from './barButton'
+import { Container } from './styled'
 
 const Sidebar = () => {
   const [active, setActive] = useState('home')
 
   return (
     <Container>
-      <Button
-        className={active === 'home' ? '--active' : ''}
-        onClick={() => setActive('home')}
-      >
+      <BarButton name="home" active={active} onClick={setActive}>
         <span className="material-icons">&#xf20c;</span>
-      </Button>
-      <Button
-        className={active === 'clients' ? '--active' : ''}
-        onClick={() => setActive('clients')}
-      >
+      </BarButton>
+
+      <BarButton name="clients" active={active} onClick={setActive}>
         <span className="material-icons">&#xea21;</span>
-      </Button>
-      <Button
-        className={active === 'plants' ? '--active' : ''}
-        onClick={() => setActive('plants')}
-      >
+      </BarButton>
+
+      <BarButton name="plants" active={active} onClick={setActive}>
         <span className="material-icons">&#xea0b;</span>
-      </Button>
-      <Button
-        className={active === 'users' ? '--active' : ''}
-        onClick={() => setActive('users')}
-      >
+      </BarButton>
+
+      <BarButton name="users" active={active} onClick={setActive}>
         <span className="material-icons">&#xf02e;</span>
-      </Button>
+      </BarButton>
     </Container>
   )
 }
