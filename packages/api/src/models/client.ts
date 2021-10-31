@@ -2,10 +2,11 @@ import mongoose from 'mongoose'
 
 const ClientSchema = new mongoose.Schema({
   name: { type: String, required: true },
+  phone: { type: String, required: true },
   powerPlants: [
     {
       _id: { type: mongoose.Schema.Types.ObjectId, ref: 'POWERPLANT' },
-      stocks: { type: String, required: true }
+      participation: { type: String, required: true }
     }
   ]
 })
