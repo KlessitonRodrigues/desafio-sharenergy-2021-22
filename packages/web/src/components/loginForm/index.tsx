@@ -25,15 +25,15 @@ const LoginForm = () => {
       />
       <Button
         text="Login"
-        onClick={() => {
+        onClick={async () => {
           dispatch({ type: 'LOADING_TRUE' })
-          login(formData).then((res) => {
-            if (res.success) {
-              window.location.hash = 'home'
-              return dispatch({ type: 'LOADING_FALSE' })
-            }
-            dispatch({ type: 'LOADING_ERROR_MSG', payload: res.msg })
-          })
+          const res = await login(formData)
+
+          if (res.success) {
+            window.location.hash = 'home'
+            return dispatch({ type: 'LOADING_FALSE' })
+          }
+          dispatch({ type: 'LOADING_ERROR_MSG', payload: res.msg })
         }}
       />
     </Container>
