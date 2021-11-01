@@ -23,6 +23,7 @@ export function reducer(state: State, action: Action) {
 
     case 'LOADING_FALSE':
       load.active = false
+      load.msg = ''
       return { ...state, load }
 
     case 'LOADING_ERROR_MSG':
