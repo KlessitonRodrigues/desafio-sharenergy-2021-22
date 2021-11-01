@@ -1,15 +1,19 @@
 import React from 'react'
-import { GlobalStyle, Theme } from './appStyle'
-import Routes from './routes'
+
 import './data/main'
+import Routes from './routes'
+import Load from './templates/load/index'
+import { GlobalProvider } from './providers/global/index'
+import { GlobalStyle, Theme } from './appStyle'
 
 const App = () => (
-  <div>
+  <GlobalProvider>
     <GlobalStyle />
     <Theme>
       <Routes />
+      <Load />
     </Theme>
-  </div>
+  </GlobalProvider>
 )
 
 export default App
