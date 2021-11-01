@@ -5,7 +5,7 @@ import PanelCard from '../../templates/panelCard'
 
 const ClientPanel = () => {
   return (
-    <Panel>
+    <Panel title='Clientes'>
       <PanelCard title="clients">f</PanelCard>
     </Panel>
   )

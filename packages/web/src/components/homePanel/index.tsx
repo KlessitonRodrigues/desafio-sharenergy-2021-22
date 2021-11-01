@@ -4,7 +4,7 @@ import Panel from '../../templates/panel/index'
 import PanelCard from '../../templates/panelCard/index'
 
 const HomePanel = () => (
-  <Panel>
+  <Panel title='Estatiticas'>
     <PanelCard title="test">
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni laudantium
       tenetur reiciendis iusto fuga possimus suscipit similique dolore sapiente

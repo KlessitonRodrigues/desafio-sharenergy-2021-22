@@ -2,10 +2,15 @@ import React from 'react'
 
 import { Container, Title, Content } from './style'
 
-const Panel = (props: { children }) => (
+type PanelProps = {
+  title: string
+  children
+}
+
+const Panel = ({ title, children }: PanelProps) => (
   <Container>
-    <Title>TEST</Title>
-    <Content>{props.children}</Content>
+    <Title>{title}</Title>
+    <Content>{children}</Content>
   </Container>
 )
 
