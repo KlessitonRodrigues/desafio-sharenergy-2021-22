@@ -1,10 +1,14 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import BarButton from './barButton'
 import { Container } from './styled'
 
 const Sidebar = () => {
   const [active, setActive] = useState('home')
+
+  useEffect(() => {
+    window.location.hash = '/home/' + active
+  }, [active])
 
   return (
     <Container>
