@@ -2,25 +2,27 @@ import { Client } from '../../data/types/client'
 import { PowerPlant } from '../../data/types/powerplant'
 
 export type State = {
-  data: {
-    clients: Client[]
-    powerPlants: PowerPlant[]
-  }
+  clients: Client[]
+  plants: PowerPlant[]
 }
 
 export type Action = { type: Options; payload?: any }
 
-export const initialState: State = null
+export const initialState: State = {
+  clients: [],
+  plants: []
+}
 
 type Options = 'SET_DATA'
 
 export function reducer(state: State, action: Action) {
-  let { data } = Object.assign({}, state)
+  let { clients, plants } = Object.assign({}, state)
 
   switch (action.type) {
     case 'SET_DATA':
-      data = action.payload
-      return { ...state, data }
+      clients = action.payload.clients
+      plants = action.payload.plants
+      return { ...state, clients, plants }
 
     default:
       return state

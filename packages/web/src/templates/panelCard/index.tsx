@@ -2,10 +2,15 @@ import React from 'react'
 
 import { Container, Title } from './styled'
 
-const PanelCard = (props: { title: string; children }) => (
+type Props = {
+  title: string
+  children
+}
+
+const PanelCard = ({ title, children }: Props) => (
   <Container>
-    <Title>{props.title}</Title>
-    {props.children}
+    <Title>{title}</Title>
+    {children}
   </Container>
 )
 

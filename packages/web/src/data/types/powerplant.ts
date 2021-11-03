@@ -1,6 +1,6 @@
-type Production = {
+export type Production = {
   _id: string
-  date: Date
+  date: string
   production: {
     time: number
     tension: number

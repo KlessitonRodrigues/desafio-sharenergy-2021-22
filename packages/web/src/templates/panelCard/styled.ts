@@ -1,11 +1,14 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  padding: 0.5rem;
-  width: fit-content;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 `
 
 export const Title = styled.h3`
+  width: 100%;
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 `
