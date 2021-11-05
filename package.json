@@ -6,6 +6,10 @@
   "author": "klessitonrds <klessitom@gmail.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "api": "yarn workspace @sharenergy/api start",
+    "web": "yarn workspace @sharenergy/web dev"
+  },
   "workspaces": {
     "packages": [
       "packages/*"
