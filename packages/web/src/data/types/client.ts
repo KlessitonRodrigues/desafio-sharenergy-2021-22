@@ -1,10 +1,11 @@
-type PowerPlant = {
+export type PowerStoks = {
   _id: string
-  stocks: string
+  participation: string
 }
 
 export type Client = {
-  _id: string
+  _id?: string
   name: string
-  powerPlants: PowerPlant[]
+  phone: string
+  powerPlants: PowerStoks[]
 }

@@ -7,13 +7,16 @@ import { GlobalContext } from '../../providers/global/index'
 import { DataContext } from '../../providers/data/index'
 import Sidebar from '../../components/sidebar/index'
 import HomePanel from '../../components/homePanel/index'
+import PlantsPanel from '../../components/plantsPanel/index'
 import ClientPanel from '../../components/clientPanel/index'
 import { Container } from './style'
 
 async function getData() {
   const data = { clients: null, plants: null }
-  data.clients = await getClients()
-  data.plants = await getPlants()
+  const resClients = await getClients()
+  const resPlants = await getPlants()
+  data.clients = resClients.success ? resClients.data : []
+  data.plants = resPlants.success ? resPlants.data : []
   return data
 }
 
@@ -36,6 +39,7 @@ const Home = () => {
       <Sidebar />
       <Switch>
         <Route path="/home/statistics" component={HomePanel} />
+        <Route path="/home/plants" component={PlantsPanel} />
         <Route path="/home/clients" component={ClientPanel} />
         <Redirect from="/" to="/home/statistics" />
       </Switch>

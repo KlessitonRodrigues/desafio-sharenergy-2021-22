@@ -4,7 +4,7 @@ import ClientModel from '../models/client'
 async function findAll(req: Request, res: Response) {
   try {
     const data = await ClientModel.find(req.body)
-    if (data) return res.send(data)
+    if (data) return res.send({ success: 1, data })
   } catch (err) {
     res.status(400).send({ success: 0 })
   }
@@ -15,7 +15,7 @@ async function insertOne(req: Request, res: Response) {
 
   try {
     const data = await powerPlant.save()
-    if (data) return res.send(data)
+    if (data) return res.send({ success: 1, data })
   } catch (err) {
     res.status(400).send({ success: 0 })
   }
@@ -23,11 +23,8 @@ async function insertOne(req: Request, res: Response) {
 
 async function updateOne(req: Request, res: Response) {
   try {
-    const data = await ClientModel.updateOne(
-      { _id: req.params.id },
-      req.body
-    )
-    if (data) return res.send(data)
+    const data = await ClientModel.updateOne({ _id: req.params.id }, req.body)
+    if (data) return res.send({ success: 1, data })
   } catch (err) {
     res.status(400).send({ success: 0, err })
   }
@@ -36,7 +33,7 @@ async function updateOne(req: Request, res: Response) {
 async function deleteOne(req: Request, res: Response) {
   try {
     const data = await ClientModel.deleteOne({ _id: req.params.id })
-    if (data) return res.send(data)
+    if (data) return res.send({ success: 1, data })
   } catch (err) {
     res.status(400).send({ success: 0 })
   }

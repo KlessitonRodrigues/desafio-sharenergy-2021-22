@@ -2,7 +2,8 @@ import { Production } from '../types/powerplant'
 
 const localeDate = (date: string) =>
   new Date(date).toLocaleDateString('pt-br', {
-    month: 'numeric'
+    day: '2-digit',
+    month: '2-digit'
   })
 
 export default function mapProduction(prodArr: Production[]) {

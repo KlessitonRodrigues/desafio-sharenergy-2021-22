@@ -18,8 +18,14 @@ function mapRadios({
   onChange
 }: Props) {
   return options.map((op, i) => (
-    <Label key={i} onClick={() => onChange(op)}>
-      <Input type="radio" name={name} value={op} checked={op === active} />
+    <Label key={i}>
+      <Input
+        type="radio"
+        name={name}
+        value={op}
+        checked={op === active}
+        onChange={() => onChange(op)}
+      />
       {labels[i] || op}
     </Label>
   ))

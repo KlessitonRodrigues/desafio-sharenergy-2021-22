@@ -12,6 +12,16 @@ export const GlobalStyle = createGlobalStyle`
 body {
     font-family: sans-serif;
 }
+
+html{
+  font-size: 15px;
+  @media(min-width: 768px ){
+    font-size: 15.5px;
+  }
+  @media(min-width: 1024px ){
+    font-size: 16px;
+  }
+}
 `
 
 const theme = {
@@ -20,11 +30,11 @@ const theme = {
     primaryVariant: '#F57F17', // yellow 900
     onPrimary: '#333',
     secondary: '#212121', // gray 900
-    onSecondary: '#FFF',
-    background: '#EEEEEE', // gray 200
-    onBack: '#333',
+    onSecondary: '#ddd',
+    background: '#eee', // gray 200
+    onBack: '#555',
     surface: '#FAFAFA', // gray 50
-    onSurface: '#333'
+    onSurface: '#555'
   },
   shadow: {
     sm: '0 2px 6px #4442',

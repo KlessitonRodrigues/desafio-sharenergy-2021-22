@@ -16,12 +16,12 @@ const Sidebar = () => {
         <span className="material-icons">&#xf20c;</span>
       </BarButton>
 
-      <BarButton name="clients" active={active} onClick={setActive}>
-        <span className="material-icons">&#xea21;</span>
-      </BarButton>
-
       <BarButton name="plants" active={active} onClick={setActive}>
         <span className="material-icons">&#xea0b;</span>
+      </BarButton>
+
+      <BarButton name="clients" active={active} onClick={setActive}>
+        <span className="material-icons">&#xea21;</span>
       </BarButton>
 
       <BarButton name="users" active={active} onClick={setActive}>

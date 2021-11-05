@@ -13,7 +13,7 @@ export const initialState: State = {
   plants: []
 }
 
-type Options = 'SET_DATA'
+type Options = 'SET_DATA' | 'SET_CLIENTS' | 'SET_PLANTS'
 
 export function reducer(state: State, action: Action) {
   let { clients, plants } = Object.assign({}, state)
@@ -23,6 +23,14 @@ export function reducer(state: State, action: Action) {
       clients = action.payload.clients
       plants = action.payload.plants
       return { ...state, clients, plants }
+
+    case 'SET_CLIENTS':
+      clients = action.payload
+      return { ...state, clients }
+
+    case 'SET_PLANTS':
+      plants = action.payload
+      return { ...state, plants }
 
     default:
       return state

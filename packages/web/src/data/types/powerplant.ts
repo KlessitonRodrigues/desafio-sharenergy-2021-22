@@ -1,5 +1,5 @@
 export type Production = {
-  _id: string
+  _id?: string
   date: string
   production: {
     time: number
@@ -11,7 +11,7 @@ export type Production = {
 }
 
 export type PowerPlant = {
-  _id: string
+  _id?: string
   name: string
   diaryProduction: Production[]
 }

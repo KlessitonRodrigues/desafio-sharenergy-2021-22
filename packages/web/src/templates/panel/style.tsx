@@ -37,7 +37,10 @@ export const Title = styled.h2`
   color: ${(props) => props.theme.colors.onSurface};
   margin-bottom: 1rem;
   font-size: 1.5rem;
-  font-family: monospace;
+  text-align: center;
+  @media (min-width: ${(p) => p.theme.screens.md}) {
+    text-align: left;
+  }
 `
 
 export const Content = styled.div`
